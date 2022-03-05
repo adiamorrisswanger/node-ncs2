@@ -32,6 +32,7 @@ promotionsRouter.route('/:promotionId')
     res.end(`Will send details of the promotion: ${req.params.promotionId} to you`);
 })
 .post( (req, res) => {
+    res.statusCode = 403;
     res.end(`POST operation not supported on /promotions/${req.params.promotionId}`); 
 })
 .put( (req, res) => {
